@@ -15,15 +15,15 @@ a. Deep Q-Learning
 ------------------
 
 
-.. [#] `Playing Atari with Deep Reinforcement Learning <https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf>`_, Mnih et al, 2013. **Algorithm: DQN.**
+.. [#] `Playing Atari with Deep Reinforcement Learning <https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf>`_, Mnih et al, 2013. **Algorithm: DQN.** Nature published Feb., 2015
 
-.. [#] `Deep Recurrent Q-Learning for Partially Observable MDPs <https://arxiv.org/abs/1507.06527>`_, Hausknecht and Stone, 2015. **Algorithm: Deep Recurrent Q-Learning.**
-
-.. [#] `Dueling Network Architectures for Deep Reinforcement Learning <https://arxiv.org/abs/1511.06581>`_, Wang et al, 2015. **Algorithm: Dueling DQN.**
+.. [#] `Deep Recurrent Q-Learning for Partially Observable MDPs <https://arxiv.org/abs/1507.06527>`_, Hausknecht and Stone, 2015. **Algorithm: Deep Recurrent Q-Learning.** not that important
 
 .. [#] `Deep Reinforcement Learning with Double Q-learning <https://arxiv.org/abs/1509.06461>`_, Hasselt et al 2015. **Algorithm: Double DQN.**
 
 .. [#] `Prioritized Experience Replay <https://arxiv.org/abs/1511.05952>`_, Schaul et al, 2015. **Algorithm: Prioritized Experience Replay (PER).**
+
+.. [#] `Dueling Network Architectures for Deep Reinforcement Learning <https://arxiv.org/abs/1511.06581>`_, Wang et al, 2015. **Algorithm: Dueling DQN.**
 
 .. [#] `Rainbow: Combining Improvements in Deep Reinforcement Learning <https://arxiv.org/abs/1710.02298>`_, Hessel et al, 2017. **Algorithm: Rainbow DQN.**
 
@@ -58,6 +58,7 @@ c. Deterministic Policy Gradients
 
 .. [#] `Addressing Function Approximation Error in Actor-Critic Methods <https://arxiv.org/abs/1802.09477>`_, Fujimoto et al, 2018. **Algorithm: TD3.**
 
+.. [#] `Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor <https://arxiv.org/abs/1801.01290>`_, Haarnoja et al, 2018. **Algorithm: SAC.**
 
 d. Distributional RL
 --------------------
@@ -70,8 +71,11 @@ d. Distributional RL
 
 .. [#] `Dopamine: A Research Framework for Deep Reinforcement Learning <https://openreview.net/forum?id=ByG_3s09KX>`_, Anonymous, 2018. **Contribution:** Introduces Dopamine, a code repository containing implementations of DQN, C51, IQN, and Rainbow. `Code link. <https://github.com/google/dopamine>`_
 
+.. [#] `Distributional Reward Decomposition for Reinforcement Learning <https://arxiv.org/abs/1911.02166>`_, Lin et al, 2019. 
+
 e. Policy Gradients with Action-Dependent Baselines
 ---------------------------------------------------
+Later, including IPG, goes beyond just being baselines, while this section is exclusively (action-dependent) baselines 
 
 .. [#] `Q-Prop: Sample-Efficient Policy Gradient with An Off-Policy Critic <https://arxiv.org/abs/1611.02247>`_, Gu et al, 2016. **Algorithm: Q-Prop.**
 
@@ -79,15 +83,10 @@ e. Policy Gradients with Action-Dependent Baselines
 
 .. [#] `The Mirage of Action-Dependent Baselines in Reinforcement Learning <https://arxiv.org/abs/1802.10031>`_, Tucker et al, 2018. **Contribution:** interestingly, critiques and reevaluates claims from earlier papers (including Q-Prop and stein control variates) and finds important methodological errors in them.
 
+.. [#] `Variance Reduction for Policy Gradient with Action-Dependent Factorized Baselines <https://arxiv.org/abs/1803.07246>`_, Wu et al, 2018. 
 
-f. Path-Consistency Learning
-----------------------------
 
-.. [#] `Bridging the Gap Between Value and Policy Based Reinforcement Learning <https://arxiv.org/abs/1702.08892>`_, Nachum et al, 2017. **Algorithm: PCL.**
-
-.. [#] `Trust-PCL: An Off-Policy Trust Region Method for Continuous Control <https://arxiv.org/abs/1707.01891>`_, Nachum et al, 2017. **Algorithm: Trust-PCL.**
-
-g. Other Directions for Combining Policy-Learning and Q-Learning
+f. Other Directions for Combining Policy-Learning and Q-Learning
 ----------------------------------------------------------------
 
 .. [#] `Combining Policy Gradient and Q-learning <https://arxiv.org/abs/1611.01626>`_, O'Donoghue et al, 2016. **Algorithm: PGQL.**
@@ -99,10 +98,23 @@ g. Other Directions for Combining Policy-Learning and Q-Learning
 .. [#] `Equivalence Between Policy Gradients and Soft Q-Learning <https://arxiv.org/abs/1704.06440>`_, Schulman et al, 2017. **Contribution:** Reveals a theoretical link between these two families of RL algorithms.
 
 
-h. Evolutionary Algorithms
+g. Evolutionary Algorithms
 --------------------------
 
 .. [#] `Evolution Strategies as a Scalable Alternative to Reinforcement Learning <https://arxiv.org/abs/1703.03864>`_, Salimans et al, 2017. **Algorithm: ES.**
+
+
+h. MaxEnt / Soft RL
+
+.. [#] `Reinforcement Learning with Deep Energy-Based Policies <https://arxiv.org/abs/1702.08165>`_, Haarnoja et al, 2017. **Contribution:** soft Q-learning with continuous action (hence an energy policy using SVGD).
+
+.. [#] `Equivalence Between Policy Gradients and Soft Q-Learning <https://arxiv.org/abs/1704.06440>`_, Schulman et al, 2017. **Contribution:** analyze soft Q-learning with discrete action.
+
+.. [#] `Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor <https://arxiv.org/abs/1801.01290>`_, Haarnoja et al, 2018. **Algorithm: Soft AC.**
+
+.. [#] `Bridging the Gap Between Value and Policy Based Reinforcement Learning <https://arxiv.org/abs/1702.08892>`_, Nachum et al, 2017. **Algorithm: PCL.** the consistency property only holds for optimal policy and PCL optimizes for it. Its essential theory is less general than soft learning.
+
+.. [#] `Trust-PCL: An Off-Policy Trust Region Method for Continuous Control <https://arxiv.org/abs/1707.01891>`_, Nachum et al, 2017. **Algorithm: Trust-PCL.**
 
 
 
@@ -186,6 +198,8 @@ b. Unsupervised RL
 
 a. Model is Learned
 -------------------
+
+.. [#] `Imagination-Augmented Agents for Deep Reinforcement Learning <https://arxiv.org/abs/1707.06203>`_, Weber et al, 2017. **Algorithm: SVG.**
 
 .. [#] `Imagination-Augmented Agents for Deep Reinforcement Learning <https://arxiv.org/abs/1707.06203>`_, Weber et al, 2017. **Algorithm: I2A.**
 
