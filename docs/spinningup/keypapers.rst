@@ -83,7 +83,7 @@ Later, including IPG, goes beyond just being baselines, while this section is ex
 
 .. [#] `The Mirage of Action-Dependent Baselines in Reinforcement Learning <https://arxiv.org/abs/1802.10031>`_, Tucker et al, 2018. **Contribution:** interestingly, critiques and reevaluates claims from earlier papers (including Q-Prop and stein control variates) and finds important methodological errors in them.
 
-.. [#] `Variance Reduction for Policy Gradient with Action-Dependent Factorized Baselines <https://arxiv.org/abs/1803.07246>`_, Wu et al, 2018. 
+.. [#] `Variance Reduction for Policy Gradient with Action-Dependent Factorized Baselines <https://arxiv.org/abs/1803.07246>`_, Wu et al, 2018. **Algorithm: A very clever idea!**
 
 
 f. Other Directions for Combining Policy-Learning and Q-Learning
@@ -105,6 +105,7 @@ g. Evolutionary Algorithms
 
 
 h. MaxEnt / Soft RL
+--------------------------
 
 .. [#] `Reinforcement Learning with Deep Energy-Based Policies <https://arxiv.org/abs/1702.08165>`_, Haarnoja et al, 2017. **Contribution:** soft Q-learning with continuous action (hence an energy policy using SVGD).
 
@@ -112,7 +113,7 @@ h. MaxEnt / Soft RL
 
 .. [#] `Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor <https://arxiv.org/abs/1801.01290>`_, Haarnoja et al, 2018. **Algorithm: Soft AC.**
 
-.. [#] `Bridging the Gap Between Value and Policy Based Reinforcement Learning <https://arxiv.org/abs/1702.08892>`_, Nachum et al, 2017. **Algorithm: PCL.** the consistency property only holds for optimal policy and PCL optimizes for it. Its essential theory is less general than soft learning.
+.. [#] `Bridging the Gap Between Value and Policy Based Reinforcement Learning <https://arxiv.org/abs/1702.08892>`_, Nachum et al, 2017. **Algorithm: PCL.** the consistency property only holds for optimal policy and PCL optimizes for it. Its essential theory is less general / principled than soft learning.
 
 .. [#] `Trust-PCL: An Off-Policy Trust Region Method for Continuous Control <https://arxiv.org/abs/1707.01891>`_, Nachum et al, 2017. **Algorithm: Trust-PCL.**
 
@@ -121,7 +122,7 @@ h. MaxEnt / Soft RL
 2. Exploration
 ==============
 
-a. Intrinsic Motivation
+a. Intrinsic Motivation / Optimism / Reward Bonus
 -----------------------
 
 .. [#] `VIME: Variational Information Maximizing Exploration <https://arxiv.org/abs/1605.09674>`_, Houthooft et al, 2016. **Algorithm: VIME.**
@@ -141,7 +142,13 @@ a. Intrinsic Motivation
 .. [#] `Exploration by Random Network Distillation <https://arxiv.org/abs/1810.12894>`_, Burda et al, 2018. **Algorithm: RND.**
 
 
-b. Unsupervised RL
+b. Posterior Sampling
+-----------------------
+
+.. [#] Bootstrap DQN, Bayesian DQN
+
+
+c. Unsupervised RL
 ------------------
 
 .. [#] `Variational Intrinsic Control <https://arxiv.org/abs/1611.07507>`_, Gregor et al, 2016. **Algorithm: VIC.**
@@ -149,6 +156,10 @@ b. Unsupervised RL
 .. [#] `Diversity is All You Need: Learning Skills without a Reward Function <https://arxiv.org/abs/1802.06070>`_, Eysenbach et al, 2018. **Algorithm: DIAYN.**
 
 .. [#] `Variational Option Discovery Algorithms <https://arxiv.org/abs/1807.10299>`_, Achiam et al, 2018. **Algorithm: VALOR.**
+
+.. [#] `Unsupervised Meta-Learning for Reinforcement Learning <https://openreview.net/forum?id=S1et1lrtwr0>`_, Gupta et al, 2019. **Algorithm: DIAYN+MAML.**
+
+.. [#] `Unsupervised Curricula for Visual Meta-Reinforcement Learning <https://arxiv.org/abs/1912.04226>`_, Jabri et al, 2019. **Algorithm: CARML.**
 
 
 3. Transfer and Multitask RL
@@ -173,9 +184,13 @@ b. Unsupervised RL
 4. Hierarchy
 ============
 
+.. [#] `Universal Option Models <https://papers.nips.cc/paper/5590-universal-option-models>`_, Yao et al, 2014.
+
 .. [#] `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/abs/1606.04695>`_, Vezhnevets et al, 2016. **Algorithm: STRAW.**
 
 .. [#] `FeUdal Networks for Hierarchical Reinforcement Learning <https://arxiv.org/abs/1703.01161>`_, Vezhnevets et al, 2017. **Algorithm: Feudal Networks**
+
+SNN4HRL
 
 .. [#] `Data-Efficient Hierarchical Reinforcement Learning <https://arxiv.org/abs/1805.08296>`_, Nachum et al, 2018. **Algorithm: HIRO.**
 
@@ -199,11 +214,13 @@ b. Unsupervised RL
 a. Model is Learned
 -------------------
 
-.. [#] `Imagination-Augmented Agents for Deep Reinforcement Learning <https://arxiv.org/abs/1707.06203>`_, Weber et al, 2017. **Algorithm: SVG.**
+.. [#] `Learning Continuous Control Policies by Stochastic Value Gradients <https://arxiv.org/abs/1510.09142>`_, Heess et al, 2015. **Algorithm: SVG.**
 
 .. [#] `Imagination-Augmented Agents for Deep Reinforcement Learning <https://arxiv.org/abs/1707.06203>`_, Weber et al, 2017. **Algorithm: I2A.**
 
 .. [#] `Neural Network Dynamics for Model-Based Deep Reinforcement Learning with Model-Free Fine-Tuning <https://arxiv.org/abs/1708.02596>`_, Nagabandi et al, 2017. **Algorithm: MBMF.**
+
+.. [#] `Universal Planning Networks <https://arxiv.org/abs/1804.00645>`_, Srinivas et al, 2018.
 
 .. [#] `Model-Based Value Expansion for Efficient Model-Free Reinforcement Learning <https://arxiv.org/abs/1803.00101>`_, Feinberg et al, 2018. **Algorithm: MVE.**
 
@@ -284,11 +301,13 @@ b. Model is Given
 
 .. [#] `Generative Adversarial Imitation Learning <https://arxiv.org/abs/1606.03476>`_, Ho and Ermon, 2016. **Algorithm: GAIL.**
 
-.. [#] `DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills <https://xbpeng.github.io/projects/DeepMimic/2018_TOG_DeepMimic.pdf>`_, Peng et al, 2018. **Algorithm: DeepMimic.**
-
 .. [#] `Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow <https://arxiv.org/abs/1810.00821>`_, Peng et al, 2018. **Algorithm: VAIL.**
 
-.. [#] `One-Shot High-Fidelity Imitation: Training Large-Scale Deep Nets with RL <https://arxiv.org/abs/1810.05017>`_, Le Paine et al, 2018. **Algorithm: MetaMimic.**
+.. [#] `Imitation Learning from Observations by Minimizing Inverse Dynamics Disagreement <https://arxiv.org/abs/1910.04417>`_, Yang et al, 2019. **Algorithm: IDDM.**
+
+.. [#] `DeepMimic: Example-Guided Deep Reinforcement Learning of Physics-Based Character Skills <https://xbpeng.github.io/projects/DeepMimic/2018_TOG_DeepMimic.pdf>`_, Peng et al, 2018. **Algorithm: DeepMimic.**
+
+.. [#] `One-Shot High-Fidelity Imitation: Training Large-Scale Deep Nets with RL <https://arxiv.org/abs/1810.05017>`_, Le Paine et al, 2018. **Algorithm: MetaMimic.**, similar mimic reward as DeepMimic
 
 
 12. Reproducibility, Analysis, and Critique
